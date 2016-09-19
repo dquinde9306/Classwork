@@ -9,7 +9,7 @@ public class DataType {
 		// The first two are using doubles while the third is an int divided by an int. Therefore it rounds
 		System.out.println(3+5.0/2+5*2);
 		System.out.println(3.0+5/2+5*2);
-		System.out.println((int)(3.0 + 5)/(2 + 5 * 2))
+		System.out.println((int)(3.0 + 5)/(2 + 5 * 2));
 	
 	
 	}
