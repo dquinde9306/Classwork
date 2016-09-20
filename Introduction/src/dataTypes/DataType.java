@@ -43,8 +43,8 @@ public class DataType {
 //		String s = "Happy "+54/3+"th birthday!";
 //		System.out.println(s);
 //		
-		String s = "Happy "+(54/3)+"th birthday!";
-		System.out.println(s);
+//		String s = "Happy "+(54/3)+"th birthday!";
+//		System.out.println(s);
 //		
 //		int m = 22;
 //		int n = 7;
@@ -54,6 +54,11 @@ public class DataType {
 //		int n = 7;
 //		System.out.println("m/n is "+((double)m/n));
 //		
+		
+		String ten = "10";
+		String two = "2";
+		if(ten.compareTo(two)>0)System.out.println("10 is greater than two");
+		else System.out.println("ten is not greater than two");
 		
 		
 		
