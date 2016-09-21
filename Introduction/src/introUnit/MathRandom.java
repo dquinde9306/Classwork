@@ -4,21 +4,21 @@ import java.util.Random;
 public class MathRandom {
 
 	public static void main(String[] args) {
-		int[] results = new int[6];
+//		int[] results = new int[6];
+//		
+////		int totalRolls = 10000;
+////		for(int index = 0; index < totalRolls; index++){
+////			int roll = rollUnfairDie();
+////			System.out.println("Roll#" + (index + 1)+ " Die is " + rollUnfairDie());
+////			results[roll-1]++;
+////		}
+////		for(int i = 0; i < 6; i++){
+////			System.out.println( (i+1) + " was rolled " + (int) (100 * (double)results[i]/totalRolls) + "% times");
+////
+////		}
 		
-		int totalRolls = 10000;
-		for(int index = 0; index < totalRolls; index++){
-			int roll = rollUnfairDie();
-			System.out.println("Roll#" + (index + 1)+ " Die is " + rollUnfairDie());
-			results[roll-1]++;
-		}
-		for(int i = 0; i < 6; i++){
-			System.out.println( (i+1) + " was rolled " + (int) (100 * (double)results[i]/totalRolls) + "% times");
 
-		}
-		
-
-		
+		cardDrawer();
 		
 		
 		
@@ -64,7 +64,6 @@ public class MathRandom {
 	
 	
 	
-}
 
 
 
@@ -76,14 +75,17 @@ public class MathRandom {
 
 
 
-	public  void cardDrawer(){
+
+	public static  void cardDrawer(){
+	
 		double rand = Math.random();
 		int card = (int) (13 * rand) +1;
 		int suit = (int) (4 * rand) +1;
 		String face = " ";
 		String type = " ";
+		int num = 0;
 	
-		if(card == 0){
+		if(card == 1){
 			face =  "Ace";
 		}
 	
@@ -99,7 +101,10 @@ public class MathRandom {
 			face = "King";
 		}
 	
-		else int face = card;
+		if(card >=2 && card <=10) {
+			num = card;
+			face ="";
+		}
 	
 	
 		if(suit == 1){
@@ -110,17 +115,17 @@ public class MathRandom {
 			type = "diamond";
 		}
 	
-		if(suit == 1){
+		if(suit == 3){
 			type = "spade";
 		}
 	
-		if(suit == 1){
+		if(suit == 4){
 			type = "hearts";
 		}
 	
-		System.out.println( face + " of " + type);
+		System.out.println( num + face + " of " + type);}}
 	
-	}
+	
 	
 	
 	
