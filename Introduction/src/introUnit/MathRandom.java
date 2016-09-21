@@ -17,13 +17,7 @@ public class MathRandom {
 
 		}
 		
-		
-		
-		System.out.println(rollUnfairDie());
-		
-		
-		
-		
+
 		
 		
 		
@@ -71,3 +65,63 @@ public class MathRandom {
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+	public  void cardDrawer(){
+		double rand = Math.random();
+		int card = (int) (13 * rand) +1;
+		int suit = (int) (4 * rand) +1;
+		String face = " ";
+		String type = " ";
+	
+		if(card == 0){
+			face =  "Ace";
+		}
+	
+		if (card == 11){
+			face =  "Jack";
+		}
+	
+		if (card == 12){
+			face =  "Queen";
+		}
+	
+		if (card == 13){
+			face = "King";
+		}
+	
+		else int face = card;
+	
+	
+		if(suit == 1){
+			type = "club";
+		}
+	
+		if(suit == 2){
+			type = "diamond";
+		}
+	
+		if(suit == 1){
+			type = "spade";
+		}
+	
+		if(suit == 1){
+			type = "hearts";
+		}
+	
+		System.out.println( face + " of " + type);
+	
+	}
+	
+	
+	
+
