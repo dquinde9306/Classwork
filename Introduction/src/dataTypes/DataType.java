@@ -11,7 +11,7 @@ public class DataType {
 		System.out.println(3.0+5/2+5*2);
 		System.out.println((int)(3.0 + 5)/(2 + 5 * 2));
 		// the placement of the double causes the answer to change because it causes different rounding: 5.0/2 = 2.5 but 5/2 = 2 and 8/12 is 0
-		if(42 == 42.0) System.out.println("42 equals 42.0");
+	//	if(42 == 42.0) System.out.println("42 equals 42.0");
 		
 		double d1 = 4.64; 
 		double d2 = 2.0;
@@ -43,8 +43,8 @@ public class DataType {
 //		String s = "Happy "+54/3+"th birthday!";
 //		System.out.println(s);
 //		
-		String s = "Happy "+(54/3)+"th birthday!";
-		System.out.println(s);
+//		String s = "Happy "+(54/3)+"th birthday!";
+//		System.out.println(s);
 //		
 //		int m = 22;
 //		int n = 7;
@@ -54,6 +54,11 @@ public class DataType {
 //		int n = 7;
 //		System.out.println("m/n is "+((double)m/n));
 //		
+		
+		String ten = "10";
+		String two = "2";
+		if(ten.compareTo(two)>0)System.out.println("10 is greater than two");
+		else System.out.println("ten is not greater than two");
 		
 		
 		
