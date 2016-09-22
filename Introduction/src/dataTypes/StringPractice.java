@@ -1,9 +1,65 @@
 package dataTypes;
 
+import java.util.Scanner;
+
 public class StringPractice {
+	
+	static Scanner input;
+	static String user;
+	static int lineCount;
 
 	public static void main(String[] args) {
-	//	String text = new String("hello world");
+		createAScanner();
+		lineCount = 0;
+		demonstrateStringMethods();
+		promptName();
+		talkForever();
+		
+	}
+	
+	
+
+	private static void promptName() {
+		print("Hello human! I am a  board covered in semi-conductors \nand other such electronic components.\nWhat is your name? ");
+		user = input.nextLine();
+		print("Awesome I will call you " + user +" until you terminate me");
+		
+	}
+
+
+
+	public static void talkForever(){
+		while(true){
+			promptInput();
+		}
+	}
+	
+	
+	public static void promptInput() {
+		print( user +" Try inputing a String!");
+		String userInput = input.nextLine();
+		print("You typed: " + userInput);
+		
+		
+	}
+	
+	public static void print(String s){
+		lineCount++;
+		System.out.println("Line#" + lineCount+" : " + s);
+	}
+
+
+
+	public static void createAScanner() {
+		input = new Scanner(System.in);
+		
+	}
+	
+	
+	
+	
+	public static void demonstrateStringMethods(){
+		
 		String text1 = "Hello World";	
 		String text2 = "Hello";
 		String text3 = " World";
@@ -21,6 +77,7 @@ public class StringPractice {
 			System.out.println("Word1 is before Word2," + " lexicongraphically." );
 		}
 			
+		
 	}
 
 }
