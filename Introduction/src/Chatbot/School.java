@@ -10,7 +10,7 @@ public class School implements Topic {
 		inSchoolLoop = true;
 		while(inSchoolLoop){
 			DanielQMain.print("tell me about school");
-			schoolResponse = DanielQMain.getInput();\
+			schoolResponse = DanielQMain.getInput();
 			if(schoolResponse.indexOf("stop")>= 0){
 				inSchoolLoop = false;
 				
