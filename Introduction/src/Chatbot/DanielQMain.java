@@ -33,7 +33,7 @@ public class DanielQMain {
 		while(inLoop){
 			print("greetings " + user + " How are you?");
 			response = getInput();
-			if(response.indexOf("good") >= 0 ){
+			if(findKeyword(response, "good", 0)){
 				print("I'm so happy you're good.");
 			}
 			
@@ -50,6 +50,36 @@ public class DanielQMain {
 	}
 	
 	
+	public static boolean findKeyword(String searchString, String key, int startIndex) {
+		//delete white space
+		String phrase = searchString.trim();
+		//set all letters to lower case
+		phrase = phrase.toLowerCase();
+		key = key.toLowerCase();
+		// find position of key
+		int psn = phrase.indexOf(key);
+		//keep looking for the word until you find the right context
+		
+		while(psn >= 0 ){
+			String before = " ";
+			String after = " ";
+			if(psn + key.length() < phrase.length()){
+				after = phrase.substring(psn + key.length(), psn + key.length() +1).toLowerCase();
+			}
+			if(psn> 0){
+				before = phrase.substring(psn,psn-1).toLowerCase();
+			}
+			if(before.compareTo("a") < 0 && after.compareTo("a") < 0){
+				psn = phrase.indexOf(key,psn+1);
+			}
+		}
+			
+		
+		return false;
+	}
+
+
+
 	public static void promptInput() {
 		print( user +" Try inputing a String!");
 		String userInput = input.nextLine();
