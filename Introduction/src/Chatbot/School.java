@@ -17,7 +17,5 @@ public class School implements Topic {
 			}
 			DanielQMain.print("That's my favorite part about school too.");
 		}
-
 	}
-
 }

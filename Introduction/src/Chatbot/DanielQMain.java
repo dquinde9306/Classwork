@@ -182,27 +182,5 @@ public class DanielQMain {
 		school = new School();
 		like = new DanielLike();
 		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
