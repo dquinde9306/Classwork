@@ -37,4 +37,16 @@ public class DanielLike implements Topic {
 		
 	}
 
+
+
+	@Override
+	public boolean isTriggered(String userInput) {
+		if(DanielQMain.findKeyword(userInput, "like", 0)>=0){
+			return true;
+		}
+		
+		return false;
+	}
 }
+
+

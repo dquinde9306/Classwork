@@ -18,4 +18,18 @@ public class School implements Topic {
 			DanielQMain.print("That's my favorite part about school too.");
 		}
 	}
+
+
+	@Override
+	public boolean isTriggered(String userInput) {
+		//String[] triggers = {"school", "class", "teacher"};
+		if(DanielQMain.findKeyword(userInput, "school", 0)>=0){
+			return true;
+		}
+		
+		if(DanielQMain.findKeyword(userInput, "class", 0)>=0){
+			return true;
+		}
+		return false;
+	}
 }
