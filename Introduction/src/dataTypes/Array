@@ -1,6 +1,6 @@
 package arrays;
 
-public class Array{
+public class ArraysMain{
   
   public static void main(String[] args){
     // this is how you time how quickly a computer processes
