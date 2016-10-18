@@ -161,6 +161,7 @@ public class Arrays {
 			
 			dieRolls[b] = (die1 + die2);
 		}
+		
 		return dieRolls;
 	}
 	
@@ -171,8 +172,22 @@ public class Arrays {
 		
 	}
 	
-
-
+	public static String[] deckArray(){
+		return null;
+		
+	}
+	
+	public static int[] results(int rolls[]){
+		int[] results = new int [11];
+		for(int i = 0; i < rolls.length; i = 0){
+			results[rolls[i]-2]++;
+		}
+		
+		for(int a= 0; a<results.length; a++){
+			results[a]=(((results[a])/rolls.length)*100);
+		}
+		return results;
+	}
 
 
 
