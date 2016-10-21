@@ -13,7 +13,7 @@ public class Arrays {
 		
 
 		
-		//arrayIntroMethod();
+		arrayIntroMethod();
 		long endTime = System.currentTimeMillis();
 		System.out.println("Completed method in " + (endTime-startTime) + " milliseconds");
 		

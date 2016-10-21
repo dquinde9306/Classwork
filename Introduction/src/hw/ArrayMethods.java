@@ -1,5 +1,6 @@
 package hw;
 
+
 public class ArrayMethods {
 
     public static void main(String[] args) {
@@ -12,6 +13,9 @@ public class ArrayMethods {
       * DO NOT spend hours and hours trying to fix perfect code just because my test
       * says that it isn't perfect!
       * */
+    	
+    	int[] array= {56, -60, 81, 16, 23, 21, 59, -55, 24, 78, -26, 91, -44, 97, -6, 4, -70, -88, 45, 42, -87, 56, 90, -90, -74, -17, -58, -13, 57, 26, 57, 64, -93, -37, 85, 86, 69, 6, -66, 11, 60, 98, 92, 21, -63, -60, 4, 22, -38, -54, -53, 48, -95, 90, -36, 27, 3, 85, -80, 50, 69, -91, -79, 52, -66, -89, -71, 71, -49, 59, 2, -11, 22, -98, 74, 76, 58, 72, 51, -58};
+		print(reverseOrder(array));
     }
     
     public static int searchUnsorted(int[] arrayToSearch, int key){
@@ -21,30 +25,44 @@ public class ArrayMethods {
     	 * if the key is not in the array, this method returns -1
     	 * */
     	
-    	
+    	for(int i = 0; i<arrayToSearch.length;i++){
+    		int test = arrayToSearch[i];
+			System.out.println("i");
+    		
+    		if(test == key){
+    //			System.out.println("item found");
 
-
-
-
-
-
-
-
+    			return i;
+    		}
+    //		System.out.println("not found");
+    	}
+    //	System.out.println("not found");
 
     	return -1;
     }
-
     public static int searchSorted(int[] sortedArrayToSearch, int key){
-    /**
-     * this method is exactly like the one above, except the parameter sortedArrayToSearch will
-     * always be sorted in DESCENDING order. Again return the index of the key or return -1
-     * if the key is not in the array
-     * 
-     * Note: You should attempt to write a method that is more efficient that searchUnsorted
-     * */
-     return -1;
+    	/**
+    	 * this method is exactly like the one above, except the parameter sortedArrayToSearch will
+    	 * always be sorted in DESCENDING order. Again return the index of the key or return -1
+    	 * if the key is not in the array
+    	 * 
+    	 * Note: You should attempt to write a method that is more efficient that searchUnsorted
+    	 * */
+    	for(int i = sortedArrayToSearch.length-1; i>-1;i--){
+    		int test = sortedArrayToSearch[i];
+    	//	System.out.println("i");
+
+    		if(test == key){
+    			//System.out.println("item found");
+
+    			return i;
+    		}
+    		//System.out.println("not found");
+    	}
+    //	System.out.println("not found");
+
+    	return -1;
     }
-    
     public static boolean isSorted(int[] array){
         /**
          * This method takes an in array as a parameter and returns 'true' if the array is already sorted in DESCENDING order
@@ -68,7 +86,7 @@ public class ArrayMethods {
          return stats;
     }
     
-    public static void reverseOrder(int[] array){
+    public static int[] reverseOrder(int[] array){
         /**
          * this method reverses the order of the array passed to it.
          * Not that this method does not have a return type. You do not need to copy the array first
@@ -81,9 +99,21 @@ public class ArrayMethods {
          * array = {-6, 16, 10, 9, 1, 5}
          * 
          * */
+    	
+    	int[] reverse = new int[array.length];
+    	for(int i=0; i<array.length;i++){
+    		reverse[(array.length-1)-i] = array[i];
+    	}
+    	return array = reverse;
+    	
+    	
+    	
+    	
+    	
+    	
     }
     
-    public static int countDifferences(int[] array1, int[] array2){
+       public static int countDifferences(int[] array1, int[] array2){
         /**Here, you will write an method that returns the number of values in two arrays 
          * that are NOT the same (either in value OR location).
          * The arrays ALWAYS have the same length
@@ -94,8 +124,16 @@ public class ArrayMethods {
          * countDifferences({1,2,3},{1,3,2}) returns 2, since '2' and '3' are both present, but different locations
          * 
          * */
-         return 0;
+    	int differenceCounter = 0;
+    	for(int i =0; i < array1.length;i++){
+    		if(array1[i] != array2[i]){
+    			differenceCounter++;
+    		}   		   		    		    		
+    	}   	
+         return differenceCounter;
     }
+    
+    
     
 
     public static int longestConsecutiveSequence(int[] array1){
@@ -162,6 +200,12 @@ public class ArrayMethods {
          * CHALLENGE
          * For extra credit, make your method handle NEGATIVE n
          * */
+    }
+    public static void print(int[] array){
+		for(int i=0;i<array.length;i++){
+			System.out.println(array[i]);
+		}
+    	
     }
     
 
