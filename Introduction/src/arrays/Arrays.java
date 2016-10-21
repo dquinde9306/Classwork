@@ -6,10 +6,10 @@ public class Arrays {
 		// this is how you time how quickly a computer processes
 		long startTime = System.currentTimeMillis();
 		
-		//SampleElement sample = new SampleElement(10);
-//		sample.increase();
-//		System.out.println("The sample element has a number equal to" + sample.getNumber());
-
+		SampleElement sample = new SampleElement(10);
+		sample.increase();
+		System.out.println("The sample element has a number equal to" + sample.getNumber());
+		
 		
 
 		
@@ -17,8 +17,11 @@ public class Arrays {
 		long endTime = System.currentTimeMillis();
 		System.out.println("Completed method in " + (endTime-startTime) + " milliseconds");
 		
+		printInt(oneToFifty());
 		
+		printInt(randomArray());
 		
+		printInt(diceArray());
 		
 		
 	}  
@@ -47,7 +50,6 @@ public class Arrays {
 		
 		
 	}
-	
 	
 	
 	private static void changeArrayElement(String[] someStrings, int i) {
@@ -127,10 +129,65 @@ public class Arrays {
 	}
 
 
+	public static int[] oneToFifty(){
+		int [] numbers = new int [50];
+		for(int i=0; i < numbers.length;i++){
+			numbers[i] = i+1;
+		
+		}
+		return numbers;
+		
+	}
 	
-
-
-
+	public static int[] randomArray(){
+		int[] randomNums = new int [10];
+		for(int a = 0; a < randomNums.length; a++){
+			double rand = Math.random();
+			randomNums[a] = (int) (100 * rand);
+			
+		}
+		
+		return randomNums;
+	}
+	
+	public static int[] diceArray(){
+		int[] dieRolls = new int[20];
+		for(int b = 0; b < dieRolls.length; b++){
+			double rand = Math.random(); 
+			double rand2 = Math.random(); 
+			
+			int die1 = ((int) (6*rand) +1);
+			int die2 = ((int) (6*rand2) +1);
+			
+			dieRolls[b] = (die1 + die2);
+		}
+		
+		return dieRolls;
+	}
+	
+	public static void printInt(int array[]){
+		for(int i = 0;i<array.length;i++){
+			System.out.println(array[i]);
+		}
+		
+	}
+	
+	public static String[] deckArray(){
+		return null;
+		
+	}
+	
+	public static int[] results(int rolls[]){
+		int[] results = new int [11];
+		for(int i = 0; i < rolls.length; i = 0){
+			results[rolls[i]-2]++;
+		}
+		
+		for(int a= 0; a<results.length; a++){
+			results[a]=(((results[a])/rolls.length)*100);
+		}
+		return results;
+	}
 
 
 
