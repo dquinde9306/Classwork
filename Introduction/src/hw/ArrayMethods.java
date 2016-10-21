@@ -200,6 +200,27 @@ public class ArrayMethods {
          * CHALLENGE
          * For extra credit, make your method handle NEGATIVE n
          * */
+    	
+    	int a = 0;
+		while(a<n){
+    		for(int i = 0; i<array.length;i++){
+    			if(array[i+1]<array.length){
+    				
+    			}
+    		}
+    		a++;
+    	}
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
     }
     public static void print(int[] array){
 		for(int i=0;i<array.length;i++){
