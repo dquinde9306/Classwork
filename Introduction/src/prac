@@ -3,14 +3,14 @@ package cave;
 public class Practice {
 	public static void main(String[] args){
 
-		makeGrid(4,2);
+		makeGrid(5,5);
 
 
 	}
 
 
 	public static void makeGrid(int rows,int cols){
-		String[][] map = new String[rows*6][rows*5];
+		String[][] map = new String[rows*5][rows*5];
 		for(int row= 0; row < map.length;row++){
 			for(int  i = 0; i < map[row].length;i++){
 				map[row][i] = " ";
@@ -18,7 +18,7 @@ public class Practice {
 		}
 		for(int c = 0; c<cols;c++){
 			for(int i  = 0; i < rows;i++){
-				for(int j = 0;j<5;j++ ){
+				for(int j = 1;j<4;j++ ){
 					map[c*4][j+(i*4)]  = "_";
 					map[4+(c*4)][j+(i*4)]  = "_";
 				}
