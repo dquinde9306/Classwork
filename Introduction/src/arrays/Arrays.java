@@ -6,10 +6,10 @@ public class Arrays {
 		// this is how you time how quickly a computer processes
 		long startTime = System.currentTimeMillis();
 		
-		SampleElement sample = new SampleElement(10);
-		sample.increase();
-		System.out.println("The sample element has a number equal to" + sample.getNumber());
-		
+//	//	SampleElement sample = new SampleElement(10);
+//		sample.increase();
+//		System.out.println("The sample element has a number equal to" + sample.getNumber());
+//		
 		
 
 		
