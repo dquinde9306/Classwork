@@ -35,10 +35,10 @@ public class TextArea extends TextLabel {
 		while(i < words.length){ //placeholder
 			if(fm.stringWidth(words[i]) >= 500){
 				drawString(words[i]);
-       i += stringWidth(words[i]);
+                                 i += stringWidth(words[i]);
+                         } 		
+			 setX(0);
+			 setY(getY() + 20);
 }
-			
-		}
-	}
 }
 
