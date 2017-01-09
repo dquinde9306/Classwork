@@ -19,4 +19,4 @@ public class SimonGameDaniel extends GUIApplication {
 		app.start();
 	}
 
-}
+} 
