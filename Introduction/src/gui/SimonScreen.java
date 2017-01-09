@@ -150,6 +150,14 @@ public class SimonScreen extends ClickableScreen implements Runnable{
 
 
 
+	private ButtonInterface getAButton() {
+		// TODO Auto-generated method stub
+		return new Button();
+	}
+
+
+
+
 	/**
 	Placeholder until partner finishes implementation of ProgressInterface
 	 */
